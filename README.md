@@ -1,68 +1,87 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# [](<[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)>)  :moneybag: Gerenciador de contas 
 
-### `yarn start`
+## [](<[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)#Descrição>)Descrição
+Desenvolva e implante (deploy) um gerenciador de contas a pagar, no qual deve ser possível realizar operações CRUD (criação, listagem, atualização, remoção) sobre a seguinte entidade de Despesas e Receitas.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## [](<[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)#CondiçãodoProjeto>) Informações
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Entidades pode ser observado abaixo:
 
-### `yarn test`
+![enter image description here](http://67.205.139.234/images/212108_1598224489.png)![enter image description here](http://67.205.139.234/images/883310_1598224305.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## [](<[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)#Visualização>)Visualização
 
-### `yarn build`
+### Prévia
+![preview](https://github.com/Gabriel-Monteiro7/AccountManagement/blob/master/.github/preview.gif)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Home
+![Home](https://github.com/Gabriel-Monteiro7/AccountManagement/blob/master/.github/home.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+### Gráfico
+![SearchPoints](https://github.com/Gabriel-Monteiro7/AccountManagement/blob/master/.github/grafico.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Lista de despesas(ou receitas)
+![enter image description here](https://github.com/Gabriel-Monteiro7/AccountManagement/blob/master/.github/lista.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Cadastro 
+![enter image description here](https://github.com/Gabriel-Monteiro7/AccountManagement/blob/master/.github/register.png)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## [](<[[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)#tecnologias>)Tecnologias utilizadas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para o desenvolvimento do projeto foi utilizada as seguintes tecnologias:
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- :atom_symbol:  **React Js** — Livraria Javascript para construção de interfaces;
+- :atom_symbol: **Redux Saga** — Biblioteca que foca em fazer os efeitos colaterais em aplicações serem mais fáceis e simples de se criar e manter;
+- :atom_symbol:  **React Toastify** — Permite adicionar notificações ao seu aplicativo com facilidade.
+- :atom_symbol:  **React Router Dom** — Roteamento e navegação para aplicações  que utilizam React Js
+- :nail_care:  **Styled Components** — Tecnologia para componentizar estilização CSS no React através do Javascript
+-   :lock:  **Yup** — É um construtor de esquema JavaScript para análise e validação de valor.
+-   :page_facing_up:  **Unform** — É uma biblioteca focada em desempenho que ajuda a criar formulários com o poder do desempenho de componentes não controlados e React Hooks.
+- :open_file_folder:  **Firebase** — É uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web.
+- :open_file_folder:  **Firebase Firestore** — É um banco de dados NoSQL hospedado na nuvem
+- :open_file_folder:  **Firebase Hosting** — É uma hospedagem de conteúdo da web de nível de produção para desenvolvedores.
 
-### Analyzing the Bundle Size
+## [](<[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)#projeto>)Projeto
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+É um sistema desenvolvido para gerenciar suas contas e acompanhar seus históricos  de despesas e receitas durante o mês.
 
-### Making a Progressive Web App
+## Instalação
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```
+# Clone o repositório
+	git clone git@github.com:GabrielMonteiro7/AccountManagement.git
 
-### Advanced Configuration
+# Vá para o diretório principal
+	cd AccountManagement
+```
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+# Instale as dependências
+	yarn 
 
-### Deployment
+# Inicie o servidor do frontEnd
+	yarn start
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+# Roda na porta 3000
+```
 
-### `yarn build` fails to minify
+## Comentários
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+O sistema foi desenvolvido com o intuito de melhorar o entendimento das biblioteca React Js. Usando Hooks, Redux, Styled Components e diversas outras tecnologias para construir sua estrutura. Este é um projeto pessoal, logo pode-se ter alguns erros.
+
+## [](<[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)#autor>):man_technologist: Autor
+
+- **Gabriel Monteiro** - [GitHub](https://github.com/Gabriel-Monteiro7) - Email: [gabrielmont713@gmail.com](mailto:gabrielmont713@gmail.com)
