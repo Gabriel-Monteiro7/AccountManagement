@@ -52,9 +52,10 @@ export function* deleteAccount({ payload }) {
   try {
     const db = fire.firestore();
     yield db.collection(type).doc(data.id).delete();
-    type = type === "Despesas" ? "expense" : "recipes";
+    type = type === "Despesas" ? "expenses" : "recipes";
     yield put(deleteSuccess(data, type));
   } catch (erro) {
+    console.log(erro);
     toast.error("Erro ao deletar");
   }
 }
@@ -85,6 +86,7 @@ function* get({ payload }) {
       }
       return { ...docAux, id: doc.id };
     });
+
     response = yield db
       .collection("Receita")
       .where("userId", "==", user.token)

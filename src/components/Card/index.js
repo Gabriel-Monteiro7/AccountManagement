@@ -32,7 +32,7 @@ export default function Card({ data, type }) {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.value) {
-        dispatch(deleteRequest(data));
+        dispatch(deleteRequest(data,type));
         Swal.fire({
           icon: "success",
           title: "Despesa deletada com sucesso",

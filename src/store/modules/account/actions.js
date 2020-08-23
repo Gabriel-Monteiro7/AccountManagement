@@ -46,16 +46,16 @@ export function getSuccess(data, total,chart) {
   };
 }
 
-export function deleteRequest(data, user) {
+export function deleteRequest(data, type) {
   return {
     type: "@account/DELETE_REQUEST",
-    payload: { data, user },
+    payload: { data, type },
   };
 }
 
-export function deleteSuccess(data) {
+export function deleteSuccess(data,type) {
   return {
     type: "@account/DELETE_SUCCESS",
-    payload: { data },
+    payload: { data,type },
   };
 }
