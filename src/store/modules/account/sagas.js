@@ -55,7 +55,6 @@ export function* deleteAccount({ payload }) {
     type = type === "Despesas" ? "expenses" : "recipes";
     yield put(deleteSuccess(data, type));
   } catch (erro) {
-    console.log(erro);
     toast.error("Erro ao deletar");
   }
 }
@@ -65,7 +64,7 @@ function* get({ payload }) {
   let total = {balance:0,recipes:0,expenses:0};
   let array = {};
   let chart = {};
-  let month = new Date().toISOString().substr(0, 4);
+  let month = new Date().toISOString().substr(0, 7);
   try {
     const db = fire.firestore();
     let response = yield db
@@ -74,7 +73,7 @@ function* get({ payload }) {
       .get();
     array.expenses = response.docs.map((doc) => {
       let docAux = doc.data();
-      if (docAux.paid === true && docAux.date.substr(0, 4) === month) {
+      if (docAux.paid === true && docAux.date.substr(0, 7) === month) {
         let index = docAux.date.substr(8, 2);
         chart[index] = {
           name: index,
@@ -93,7 +92,7 @@ function* get({ payload }) {
       .get();
     array.recipes = response.docs.map((doc, index) => {
       let docAux = doc.data();
-      if (docAux.received === true && docAux.date.substr(0, 4) === month) {
+      if (docAux.received === true && docAux.date.substr(0,7) === month) {
         let index = docAux.date.substr(8, 2);
         chart[index] = {
           name: index,
@@ -107,7 +106,6 @@ function* get({ payload }) {
     });
     yield put(getSuccess(array, total, chart));
   } catch (erro) {
-    console.log(erro);
     toast.error("Erro na listagem");
   }
 }
