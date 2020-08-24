@@ -33,6 +33,7 @@ export default function NavBar() {
               {routes.map((route, index) => {
                 return (
                   <NewNavItem
+                    title={route.label}
                     selected={history.location.pathname === route.path}
                     key={route.path}
                   >
@@ -41,6 +42,7 @@ export default function NavBar() {
                 );
               })}
               <ButtonLogon
+              title={"Sair"}
                 onClick={() => {
                   dispatch(singOut());
                 }}

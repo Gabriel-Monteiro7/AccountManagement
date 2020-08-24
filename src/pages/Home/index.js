@@ -62,6 +62,7 @@ export default function Home(props) {
         </Card>
         <ContainerChart>
           <ResponsiveContainer>
+
             <AreaChart
               width={1000}
               height={400}

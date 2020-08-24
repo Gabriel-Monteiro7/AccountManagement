@@ -9,7 +9,7 @@ Desenvolva e implante (deploy) um gerenciador de contas a pagar, no qual deve se
 
 Entidades pode ser observado abaixo:
 
-![enter image description here](http://67.205.139.234/images/212108_1598224489.png)![enter image description here](http://67.205.139.234/images/883310_1598224305.png)
+![preview](https://github.com/Gabriel-Monteiro7/AccountManagement/blob/master/.github/entidades.jpeg)
 
 ## [](<[https://github.com/Gabriel-Monteiro7/AccountManagement](https://github.com/Gabriel-Monteiro7/AccountManagement)#Visualização>)Visualização
 

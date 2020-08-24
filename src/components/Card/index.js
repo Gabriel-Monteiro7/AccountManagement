@@ -32,7 +32,7 @@ export default function Card({ data, type }) {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.value) {
-        dispatch(deleteRequest(data,type));
+        dispatch(deleteRequest(data, type));
         Swal.fire({
           icon: "success",
           title: "Despesa deletada com sucesso",
@@ -45,7 +45,7 @@ export default function Card({ data, type }) {
   return (
     <Container>
       <Image />
-      <ButtonDelete onClick={() => onDelete()}>
+      <ButtonDelete onClick={() => onDelete()} title={"Deletar"}>
         <IconClosed />
       </ButtonDelete>
       <SpanCard>{formatDate(data.date)}</SpanCard>
@@ -61,6 +61,7 @@ export default function Card({ data, type }) {
             </Paid>
           </div>
           <ButtonEdit
+            title={"Editar"}
             onClick={() => {
               history.push("/register", { data, type });
             }}
