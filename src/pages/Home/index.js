@@ -48,7 +48,10 @@ export default function Home(props) {
             {formatPrice(account?.total.expenses || 0)}
           </ValueCard>
           <FooterCard>
-            {account.expenses.length || 0} despesas paga neste mês
+            {account.expenses.filter((expense) => {
+              return expense.date.substr(0, 7) === new Date().toISOString().substr(0, 7);
+            }).length || 0}{" "}
+            despesas paga neste mês
           </FooterCard>
         </Card>
         <Card>
@@ -57,12 +60,14 @@ export default function Home(props) {
             {formatPrice(account?.total.recipes || 0)}
           </ValueCard>
           <FooterCard>
-            {account.recipes.length || 0} receitas recebidas neste mês
+            {account.recipes.filter((recipe) => {
+              return recipe.date.substr(0, 7) === new Date().toISOString().substr(0, 7);
+            }).length || 0}{" "}
+            receitas recebidas neste mês
           </FooterCard>
         </Card>
         <ContainerChart>
           <ResponsiveContainer>
-
             <AreaChart
               width={1000}
               height={400}

@@ -17,6 +17,7 @@ export default function FormRegister({ schema, fields = [], children }) {
   const { state } = useLocation();
   const dispatch = useDispatch();
   function handleSubmit(data, { resetForm }) {
+    if (paid || received === true) data.date = new Date().toISOString().substr(0, 16);
     setLoading(true);
     let type = state.type === "Despesa" ? { paid } : { received };
     data = { ...state.data, ...data, ...type };
@@ -28,6 +29,7 @@ export default function FormRegister({ schema, fields = [], children }) {
 
     // resetForm();
   }
+
   const [paid, setPaid] = useState(state?.data?.paid || false);
   const [received, setReceived] = useState(state?.data?.received || false);
 
@@ -38,7 +40,14 @@ export default function FormRegister({ schema, fields = [], children }) {
       initialData={state?.data}
     >
       {fields.map((input, index) => {
-        return <Input key={index} {...input} />;
+        return (
+          <Input
+            key={index}
+            {...input}
+            onChange={(valor) => {
+            }}
+          />
+        );
       })}
       {state.data && (
         <ContainerSwitch>
